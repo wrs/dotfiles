@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+# Make a list of all the files except "install"
+typeset -A files_hash
+all_files=(*)
+files_hash=(${=${(j: 1 :)all_files}} 1)
+unset "files_hash[install]"
+files=(${(k)files_hash})
+
+print "Files to install: ${(j:, :)files}"
+
+print "Backing up files to ~/.dotbackup"
+
+if [[ ! -e ~/.dotbackup ]] then
+  mkdir ~/.dotbackup
+fi
+
+cp -R ${files/#/~/.} ~/.dotbackup
+
+print "Replacing files"
+
+for f in $files; do
+  target=${f/#/~/.}
+  rm -fr $target
+  cp -R $f $target
+done
