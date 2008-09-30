@@ -1,0 +1,9 @@
+This is my collection of dot/rc files, mostly zshrc but with a few other
+tidbits. It's intended for personal use but since I copied 95% from elsewhere
+you should feel free to copy it from me. :)
+
+For convenience, the dot-files are not dotted here. Run ./install to copy
+them into your home directory as dot-files. It should theoretically make a
+backup of what you have there already. But of course:
+
+THESE FILES COME WITH NO WARRANTY AND YOU USE THEM AT YOUR OWN RISK.
