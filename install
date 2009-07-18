@@ -5,17 +5,20 @@ typeset -A files_hash
 all_files=(*)
 files_hash=(${=${(j: 1 :)all_files}} 1)
 unset "files_hash[install]"
+unset "files_hash[README]"
 files=(${(k)files_hash})
 
 print "Files to install: ${(j:, :)files}"
 
-print "Backing up files to ~/.dotbackup"
+backupdir=~/.dotbackup/`date "+%Y%m%dT%H%M%S"`
 
-if [[ ! -e ~/.dotbackup ]] then
-  mkdir ~/.dotbackup
+print "Backing up files to $backupdir"
+
+if [[ ! -e $backupdir ]] then
+  mkdir -p $backupdir
 fi
 
-cp -R ${files/#/~/.} ~/.dotbackup
+cp -R ${files/#/~/.} $backupdir
 
 print "Replacing files"
 

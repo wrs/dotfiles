@@ -39,9 +39,16 @@ if [ -d /opt/local/bin ]; then
         export MANPATH="/opt/local/man/:${MANPATH}"
 fi
 
+export EC2_HOME=~/aws/ec2-api-tools
+PATH="$EC2_HOME/bin:${PATH}"
+
 PATH="${HOME}/bin:${PATH}"
 
 export PATH
+
+# Java for Mac OS X
+
+export JAVA_HOME=/Library/Java/Home
 
 # less options
 LESS=aFmqRX

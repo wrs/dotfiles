@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# Handy Ruby/Rails stuff
+
+# ~gems for gem install dir
+hash -d gems=`gem env gemdir`/gems
+
+alias sc=script/console
+alias ss=script/server
