@@ -36,7 +36,12 @@ export LC_ALL=
 
 if [ -d /opt/local/bin ]; then
         PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
-        export MANPATH="/opt/local/man/:${MANPATH}"
+        export MANPATH="/opt/local/man:${MANPATH}"
+fi
+
+if [ -d /usr/local/mysql ]; then
+        PATH="/usr/local/mysql/bin:${PATH}"
+        export MANPATH="/usr/local/mysql/man:${MANPATH}"
 fi
 
 export EC2_HOME=~/aws/ec2-api-tools
