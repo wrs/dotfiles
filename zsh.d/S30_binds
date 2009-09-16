@@ -23,5 +23,3 @@ bindkey "^P" up-line-or-history
         
 bindkey "^[H" run-help
 bindkey "^[h" run-help
-
-bindkey -M menuselect '^o' accept-and-infer-next-history

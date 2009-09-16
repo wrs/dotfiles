@@ -52,3 +52,6 @@ zstyle ':completion:*' file-patterns \
 #[ ignores for mate ]############################################################
 
 zstyle ':completion:*:*:mate:*:*files' ignored-patterns '*?.(aux|dvi|ps|pdf|bbl|toc|lot|lof|o|cm?)'
+
+zmodload zsh/complist
+bindkey -M menuselect '^o' accept-and-infer-next-history
