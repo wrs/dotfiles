@@ -47,6 +47,9 @@ fi
 export EC2_HOME=~/aws/ec2-api-tools
 PATH="$EC2_HOME/bin:${PATH}"
 
+export AWS_ELB_HOME=~/aws/elb-tools
+PATH="$AWS_ELB_HOME/bin:${PATH}"
+
 PATH="${HOME}/bin:${PATH}"
 
 export PATH
