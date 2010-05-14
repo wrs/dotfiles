@@ -159,6 +159,9 @@ setopt vi                   # use bindkeys
 setopt no_xtrace            # do not debug by default
 setopt zle                  # use zsh le
 
+# Read more: http://www.faqs.org/faqs/unix-faq/shell/zsh/#ixzz0nUGf8JnN
+[[ $EMACS = t ]] && unsetopt zle
+
 is-at-least 4.3.0 && {
     unsetopt hist_save_by_copy
 }
