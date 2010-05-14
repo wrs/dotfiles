@@ -44,6 +44,14 @@ if [ -d /usr/local/mysql ]; then
         export MANPATH="/usr/local/mysql/man:${MANPATH}"
 fi
 
+if [ -d /opt/local/lib/postgresql84/bin ]; then
+        PATH="/opt/local/lib/postgresql84/bin:${PATH}"
+fi
+
+if [ -d /Library/PostgreSQL/8.4/bin ]; then
+        PATH="/Library/PostgreSQL/8.4/bin:${PATH}"
+fi
+
 export EC2_HOME=~/aws/ec2-api-tools
 PATH="$EC2_HOME/bin:${PATH}"
 
