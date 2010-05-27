@@ -2,10 +2,15 @@ require 'rubygems'
 require 'pp'
 require 'irb/completion'
 require 'irb/ext/save-history'
-require 'utility_belt'
+begin
+  require 'utility_belt'
+rescue Exception
+  nil
+end
 
+ARGV.concat ["--readline"]
 IRB.conf[:SAVE_HISTORY] = 100
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history" 
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history" 
 IRB.conf[:PROMPT_MODE]  = :SIMPLE
 
 # Just for Rails...
@@ -28,6 +33,10 @@ IRB.conf[:IRB_RC] = lambda do
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     ActiveRecord::Base.instance_eval { alias :[] :find }
   end
-  UtilityBelt::Themes.background(:light)
-  UtilityBelt::Equipper.equip(:all)
+  begin
+    UtilityBelt::Themes.background(:light)
+    UtilityBelt::Equipper.equip(:all)
+  rescue Exception
+    nil
+  end
 end
