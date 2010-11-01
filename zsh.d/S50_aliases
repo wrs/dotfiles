@@ -68,3 +68,5 @@ vnice() {
                 ionice -n7 nice -n20 $@
         fi
 }
+
+function feature() { git checkout "$1" && git rebase master && git checkout master && git merge "$1" && git branch -d "$1" }
