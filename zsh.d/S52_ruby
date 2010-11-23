@@ -7,3 +7,5 @@ hash -d gems=`gem env gemdir`/gems
 
 alias sc=script/console
 alias ss=script/server
+alias rs="rails server thin $*"
+alias rc="rails console $*"
