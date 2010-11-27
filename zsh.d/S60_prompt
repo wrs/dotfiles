@@ -31,8 +31,10 @@ function lprompt {
     col2="%{$4$fg[$3]%}"
     ch1=$col1${1[1]}
     ch2=$col1${1[2]}
-
+    titlebar=$'%{\e]0;%d\a%}'
+    
     PROMPT="\
+$titlebar\
 $bgc$ch1\
 $bgc$col2%B%2~%b\
 $ch2$rst \
