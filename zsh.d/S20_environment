@@ -48,6 +48,11 @@ if [ -d /opt/local/lib/postgresql84/bin ]; then
         PATH="/opt/local/lib/postgresql84/bin:${PATH}"
 fi
 
+if [ -d /usr/local/bin ]; then
+        PATH="/usr/local/bin:${PATH}"
+        export MANPATH="/usr/local/man:${MANPATH}"
+fi
+
 if [ -d /Library/PostgreSQL/8.4/bin ]; then
         PATH="/Library/PostgreSQL/8.4/bin:${PATH}"
 fi

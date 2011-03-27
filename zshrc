@@ -10,6 +10,10 @@ for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do
         source $zshrc_snipplet
 done
 
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 if [ $UID -eq 0 ]; then
         compinit
 else
