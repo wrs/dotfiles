@@ -39,7 +39,6 @@
   f = fetch
   l = log
   m = merge
-  p = push
   r = reset
   rb = rebase
   rba = rebase --abort
