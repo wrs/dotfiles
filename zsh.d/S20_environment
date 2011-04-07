@@ -24,6 +24,8 @@ export FULLNAME="Walter Smith"
 export MANWIDTH=80
 export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
 export VISUAL=$EDITOR
+export BUNDLER_EDITOR=mvim
+
 export CLICOLOR=1
 #export CCACHE_DIR=$HOME/.ccache
 
