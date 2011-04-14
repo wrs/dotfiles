@@ -72,3 +72,4 @@ vnice() {
 alias g=git
 function gstart() { git checkout -b "$1" master }
 function gfinish() { git checkout "$1" && git rebase master && git checkout master && git merge "$1" && git branch -d "$1" }
+function gpull() { git pull && git log --oneline "master@{1}..master" }
