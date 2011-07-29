@@ -22,7 +22,7 @@ export FULLNAME="Walter Smith"
 # export IRC_SERVERS_FILE="$HOME/.irc-serv"
 
 export MANWIDTH=80
-export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
+export EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"'
 export VISUAL=$EDITOR
 export BUNDLER_EDITOR=mvim
 
