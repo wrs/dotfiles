@@ -72,4 +72,4 @@ vnice() {
 alias g=git
 function gstart() { git checkout -b "$1" master }
 function gfinish() { git checkout "$1" && git rebase master && git checkout master && git merge "$1" && git branch -d "$1" }
-function gpull() { oldrev=`git rev-parse master`; git pull && git log --oneline $oldrev..master }
+function gpull() { oldrev=`git rev-parse origin/master`; git pull && git log --oneline $oldrev..origin/master }
