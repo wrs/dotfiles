@@ -52,6 +52,10 @@ if [ -d /opt/local/lib/postgresql84/bin ]; then
         PATH="/opt/local/lib/postgresql84/bin:${PATH}"
 fi
 
+if [ -d /usr/local/share/python ]; then
+        PATH="/usr/local/share/python:${PATH}"
+fi
+
 if [ -d /usr/local/bin ]; then
         PATH="/usr/local/bin:${PATH}"
         export MANPATH="/usr/local/man:${MANPATH}"
