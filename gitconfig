@@ -19,6 +19,8 @@
   ca = commit -a
   cam = commit --amend
   cama = commit -a --amend -C HEAD
+  fx = commit --fixup
+  fxa = commit -a --fixup
 
   # reset
   ## soft resets
