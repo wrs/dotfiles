@@ -76,8 +76,6 @@ PATH="${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${PATH}"
 
 PATH="${HOME}/bin:${PATH}"
 
-export PATH
-
 # Java for Mac OS X
 
 export JAVA_HOME=/Library/Java/Home
@@ -102,3 +100,10 @@ export NODE_PATH=/usr/local/lib/node
 
 # Fixes JSLint in MacVIM
 export JS_CMD=node
+
+# Go!
+export GOROOT=/usr/local/go
+export GOPATH=~/src/go
+PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
+
+export PATH
