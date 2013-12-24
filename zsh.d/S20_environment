@@ -98,6 +98,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # Homebrew node.js libs
 export NODE_PATH=/usr/local/lib/node
 
+# Homebrew Python packages
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
 # Fixes JSLint in MacVIM
 export JS_CMD=node
 
