@@ -75,3 +75,5 @@ function gfinish() { git checkout "$1" && git rebase master && git checkout mast
 function gpull() { oldrev=`git rev-parse origin/master`; git pull && git log --oneline $oldrev..origin/master }
 
 function hr() { echo $(tput cuu1)$fg[blue]$(printf '─%.0s' $(seq $COLUMNS)) }
+
+function sst { ssh -t $1.czops.net 'cd /srv/careful/current 2> /dev/null; sudo su deploy' }
