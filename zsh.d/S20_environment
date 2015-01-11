@@ -105,4 +105,7 @@ export GOROOT=/usr/local/go
 export GOPATH=~/src/go
 PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
 
+# Haskell
+PATH="${HOME}/Library/Haskell/bin:${PATH}"
+
 export PATH
