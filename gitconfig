@@ -42,6 +42,7 @@
   l = log
   m = merge
   mt = mergetool
+  poh = push origin HEAD
   r = reset
   rb = rebase
   rba = rebase --abort
