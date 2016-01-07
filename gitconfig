@@ -1,6 +1,6 @@
 [user]
   name = Walter Smith
-  email = walter@infbio.com
+	email = walter@carezone.com
 [instaweb]
   httpd = webrick
 [color]
@@ -52,4 +52,14 @@
 [rebase]
   autosquash = true
 [core]
-  quotepath = false
+	quotepath = false
+[push]
+	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
