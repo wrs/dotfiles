@@ -43,22 +43,9 @@ if [ -d /opt/local/bin ]; then
         export MANPATH="/opt/local/man:${MANPATH}"
 fi
 
-if [ -d /usr/local/mysql ]; then
-        PATH="/usr/local/mysql/bin:${PATH}"
-        export MANPATH="/usr/local/mysql/man:${MANPATH}"
-fi
-
-if [ -d /opt/local/lib/postgresql84/bin ]; then
-        PATH="/opt/local/lib/postgresql84/bin:${PATH}"
-fi
-
 if [ -d /usr/local/bin ]; then
-        PATH="/usr/local/bin:${PATH}"
+        PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
         export MANPATH="/usr/local/man:${MANPATH}"
-fi
-
-if [ -d /Library/PostgreSQL/8.4/bin ]; then
-        PATH="/Library/PostgreSQL/8.4/bin:${PATH}"
 fi
 
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
@@ -98,8 +85,5 @@ export JS_CMD=node
 export GOROOT=/usr/local/go
 export GOPATH=~/src/go
 PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
-
-# Haskell
-PATH="${HOME}/Library/Haskell/bin:${PATH}"
 
 export PATH
