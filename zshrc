@@ -23,3 +23,5 @@ else
                 zrecompile -p $f && rm -f $f.zwc.old
         done
 fi
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
