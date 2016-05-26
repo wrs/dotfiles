@@ -7,6 +7,7 @@
   ui = true
 [merge]
   tool = kdiff3
+	conflictStyle = diff3
 [gui]
   fontdiff = -family Consolas -size 13 -weight normal -slant roman -underline 0 -overstrike 0
   fontui = -family \"Abadi MT Condensed Light\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
@@ -42,7 +43,7 @@
   l = log
   m = merge
   mt = mergetool
-  poh = push origin HEAD
+  poh = push --set-upstream origin HEAD
   r = reset
   rb = rebase
   rba = rebase --abort
