@@ -71,8 +71,15 @@ vnice() {
 
 alias g=git
 function gstart() { git checkout -b "$1" master }
-function gfinish() { git checkout "$1" && git rebase master && git checkout master && git merge "$1" && git branch -d "$1" }
-function gpull() { oldrev=`git rev-parse origin/master`; git pull && git log --oneline $oldrev..origin/master }
+function gfinish() {
+    git checkout "$1" && git rebase master && git checkout master && git merge "$1" && git branch -d "$1"
+}
+function gpull() {
+    local branch
+    branch=`git branch --no-color 2>| /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+    oldrev=`git rev-parse origin/${branch}`
+    git pull && git log --oneline $oldrev..origin/${branch}
+}
 
 function hr() { echo $(tput cuu1)$fg[blue]$(printf '─%.0s' $(seq $COLUMNS)) }
 
